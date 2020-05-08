@@ -1,0 +1,6 @@
+server {
+        server_name {HOST} www.{HOST};
+        location / {        
+                proxy_pass       http://{IP}:{PORT};
+        }
+}
