@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strconv"
 
@@ -61,4 +62,12 @@ func createTemplate(host string, ip string, port int) {
 		os.Exit(1)
 	}
 	fmt.Println("proxy_pass generado para " + host)
+
+	cmd := exec.Command("ls", "-la")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	e := cmd.Run()
+	if err != nil {
+		log.Fatal(e)
+	}
 }

@@ -12,7 +12,7 @@ var rootCmd = &cobra.Command{
 	Short: "ngMagic es una fiesta de cli",
 	Long:  `por ahora solo agrega proxy_pass a nginx`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("algo hizo")
+		fmt.Println("Welcome to ngMagic! run ngMagic --help for details")
 	},
 }
 
